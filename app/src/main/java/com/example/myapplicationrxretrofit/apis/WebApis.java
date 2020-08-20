@@ -17,5 +17,11 @@ public  interface WebApis {
     Call<List<GitHubreppo>> getReposForUser(@Path("user") String user);
 
 
+    //con rx
+    @GET("/users/{user}/repos")
+    Single<List<GitHubreppo>> getReposForUserWithRx(@Path("user") String user);
+
+
+
 }
 
